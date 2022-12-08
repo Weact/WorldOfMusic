@@ -1,58 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using UnityEngine.UI;
+using TMPro;
 
 public class ObjectManager : MonoBehaviour
 {
-    public GameObject Panellum;
-    public GameObject PanelStruct;
-    public GameObject PanelDj;
-    public GameObject PanelEffet;
+   
 
-    // Start is called before the first frame update
+
+
+    public GameObject PanelAccessoires;
+    public GameObject PanelStruct;
+ 
     void Start()
     {
-        Panellum.SetActive(true);
-        PanelStruct.SetActive(false);
-        PanelDj.SetActive(false);
-        PanelEffet.SetActive(false);
+        PanelStruct.SetActive(true);
+        PanelAccessoires.SetActive(false);
+
+
+       
+
+
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
     }
-
-    public void PanelLum()
-    {
-        Panellum.SetActive(true);
-        PanelStruct.SetActive(false);
-        PanelDj.SetActive(false);
-        PanelEffet.SetActive(false);
-    }
-
     public void PanelStruc()
     {
-        Panellum.SetActive(false);
         PanelStruct.SetActive(true);
-        PanelDj.SetActive(false);
-        PanelEffet.SetActive(false);
+        PanelAccessoires.SetActive(false);
     }
 
-    public void PanelDJ()
+    public void PanelAccs()
     {
-        Panellum.SetActive(false);
         PanelStruct.SetActive(false);
-        PanelDj.SetActive(true);
-        PanelEffet.SetActive(false);
+        PanelAccessoires.SetActive(true);
     }
 
-    public void PanelEff()
-    {
-        Panellum.SetActive(false);
-        PanelStruct.SetActive(false);
-        PanelDj.SetActive(false);
-        PanelEffet.SetActive(true);
-    }
+
+  
 }
