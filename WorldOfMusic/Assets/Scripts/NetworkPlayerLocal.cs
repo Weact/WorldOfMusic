@@ -12,6 +12,8 @@ public class NetworkPlayerLocal : MonoBehaviour
     private MeshRenderer _material;
     [SerializeField]
     private GameObject _camera;
+
+    private NetworkData networkData;
     
     // Start is called before the first frame update
     void Start()
@@ -20,12 +22,23 @@ public class NetworkPlayerLocal : MonoBehaviour
         {
             _material.material.color = Color.red;
             _camera.SetActive(true);
+            networkData = GameObject.FindObjectOfType<NetworkData>();
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (_networkObject.IsOwner && Input.GetKeyDown(KeyCode.A))
+        {
+            if (networkData != null)
+            {
+                networkData.Incremente();
+            }
+            else
+            {
+                networkData = GameObject.FindObjectOfType<NetworkData>();
+            }
+        }
     }
 }

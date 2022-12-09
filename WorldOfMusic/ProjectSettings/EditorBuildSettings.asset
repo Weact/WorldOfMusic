@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 556f5b5972e97a14a94f250d9f8b80d6
   - enabled: 0
     path: Assets/Scenes/TestVocal.unity
     guid: 259ee20cfb3233349b6c914d951f20cc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Samples/Vivox/15.1.190200-pre.1/Chat Channel Sample/Assets/ChatChannelSample/Scenes/MainScene.unity
     guid: dbc457e6df4234749aff8bd5ffa028ef
   m_configObjects:
