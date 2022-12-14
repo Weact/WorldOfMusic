@@ -8,6 +8,7 @@ using TMPro;
 
 public class ButGenerator : MonoBehaviour
 {
+    public HUDScript HUD;
     [Serializable]
     public struct ObjetStructure
     {
@@ -17,17 +18,6 @@ public class ButGenerator : MonoBehaviour
         public GameObject prefab;
     }
     [SerializeField] ObjetStructure[] objstruct;
-
-    [Serializable]
-    public struct ObjetAccessoires
-    {
-        public string nom;
-        public string description;
-        public Sprite image;
-        public GameObject prefab;
-    }
-    [SerializeField] ObjetAccessoires[] objacc;
-
 
     
     void Start()
@@ -42,29 +32,14 @@ public class ButGenerator : MonoBehaviour
             g.transform.GetChild(0).GetComponent<Image>().sprite = objstruct[i].image;
             g.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = objstruct[i].nom;
             g.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = objstruct[i].description;
-
+            g.transform.GetChild(3).GetComponent<buttonScript>().prefab = objstruct[i].prefab;
+            g.GetComponent<Button>().onClick.AddListener(() => HUD.spawnElement(g));
 
         }
 
         Destroy(ButStruct);
 
 
-
-
-        GameObject Butaccess = transform.GetChild(0).gameObject;
-        GameObject k;
-        int P = objstruct.Length;
-        for (int i = 0; i < P; i++)
-        {
-            k = Instantiate(Butaccess, transform);
-            k.transform.GetChild(0).GetComponent<Image>().sprite = objstruct[i].image;
-            k.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = objstruct[i].nom;
-            k.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = objstruct[i].description;
-
-
-        }
-
-        Destroy(Butaccess);
     }
 
     
