@@ -63,7 +63,7 @@ public class Sound_Peer : MonoBehaviour
                 bandBuffer[g] -= bufferDecrease[g];
                 bufferDecrease[g] *= 1.2f;
             }
-            Debug.Log(bufferDecrease[g]);
+            //Debug.Log(bufferDecrease[g]);
         }   
     }
 
