@@ -11171,7 +11171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8892561495345186318}
   m_Layer: 0
-  m_Name: "Pr\xE9fab sc\xE8ne_pr\xE9-sc\xE8ne"
+  m_Name: Prefab_SceneComplete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
