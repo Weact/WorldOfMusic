@@ -7,10 +7,12 @@ public class PlayerInteract : MonoBehaviour {
     public bool isReaching = false;
     public bool isInteracted = false;
     public GameObject text1;
+	public GameObject souris;
     
     //Initialisation du script :
     void Start() {
         text1.SetActive(false);
+		souris.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
@@ -28,6 +30,7 @@ public class PlayerInteract : MonoBehaviour {
     {
         isReaching = false;
         text1.SetActive(false);
+		souris.SetActive(false);
     }
 
     private void Update()
@@ -46,6 +49,7 @@ public class PlayerInteract : MonoBehaviour {
     void Reach()
     { 
         Debug.Log("Le joueur est entré dans la zone du collider");
+		souris.SetActive(true);
     }
                                           
    void Interact()
@@ -54,17 +58,14 @@ public class PlayerInteract : MonoBehaviour {
        isInteracted = true;
        if (isInteracted == true)
        {
-           Debug.Log("L'objet a été interagi");
-           //On affiche l'objet Text1
-           text1.SetActive(true);
+           	Debug.Log("L'objet a été interagi");
+          	//On affiche l'objet Text1
+           	text1.SetActive(true);
+			//Et on masque l'objet Souris
+			souris.SetActive(false);	
        }
 
    }
 
-   void AfficheTexte()
-   {
-       
-       
-   }
-   
+
 }
