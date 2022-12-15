@@ -8,6 +8,7 @@ using TMPro;
 
 public class ButGenerator : MonoBehaviour
 {
+    [SerializeField]
     public HUDScript HUD;
     [Serializable]
     public struct ObjetStructure
@@ -24,17 +25,17 @@ public class ButGenerator : MonoBehaviour
     {
 
         GameObject ButStruct = transform.GetChild(0).gameObject;
-        GameObject g;
         int N = objstruct.Length;
         for (int i = 0; i < N; i++)
         {
+            GameObject g;
             g = Instantiate(ButStruct, transform);
             g.transform.GetChild(0).GetComponent<Image>().sprite = objstruct[i].image;
             g.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = objstruct[i].nom;
             g.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = objstruct[i].description;
             g.transform.GetChild(3).GetComponent<buttonScript>().prefab = objstruct[i].prefab;
+            HUD.addObject(objstruct[i]);
             g.GetComponent<Button>().onClick.AddListener(() => HUD.spawnElement(g));
-
         }
 
         Destroy(ButStruct);
