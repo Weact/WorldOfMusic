@@ -38,24 +38,4 @@ public class ServerManager : MonoBehaviour
     {
         Debug.Log("Client disconnected: " + clientId);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-        if (!_networkObject)
-        {
-            if (Input.GetKeyDown("T"))
-            {
-                if (SceneManager.GetActiveScene().name == "ServeurClientTest")
-                {
-                    SceneManager.LoadScene("ServeurClientTest2");
-                }
-                else
-                {
-                    SceneManager.LoadScene("ServeurClientTest");
-                }
-            }
-        }
-    }
 }
