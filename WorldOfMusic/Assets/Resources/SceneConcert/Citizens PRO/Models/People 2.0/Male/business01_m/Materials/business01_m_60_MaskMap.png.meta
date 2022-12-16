@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:WorldOfMusic/Assets/Resources/SceneConcert/Citizens PRO/Models/People 2.0/Male/business01_m/Materials/business01_m_60_MaskMap.png.meta
 guid: 5b647acdb38e15341a16322f7caf0c5c
+=======
+guid: 8ae892071e7bd7944883e1e02a4d6bbd
+>>>>>>> develop:WorldOfMusic/Assets/Resources/Citizens PRO/Models/People 2.0/Male/business01_m/Materials/business01_m_60_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

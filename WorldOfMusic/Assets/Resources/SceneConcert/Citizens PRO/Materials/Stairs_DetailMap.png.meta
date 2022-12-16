@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:WorldOfMusic/Assets/Resources/SceneConcert/Citizens PRO/Materials/Stairs_DetailMap.png.meta
 guid: 6a27452b6a51e7f499daf7dca5b4f3e5
+=======
+guid: 6020df1c8af10e04a81b1fc59c20cbd7
+>>>>>>> develop:WorldOfMusic/Assets/Resources/Citizens PRO/Materials/Stairs_DetailMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

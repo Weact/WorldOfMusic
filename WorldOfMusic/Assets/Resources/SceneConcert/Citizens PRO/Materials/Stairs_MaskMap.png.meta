@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:WorldOfMusic/Assets/Resources/SceneConcert/Citizens PRO/Materials/Stairs_MaskMap.png.meta
 guid: ea0d9e2714688fc408ef738da82a7dc5
+=======
+guid: 56f9087b846772e40a64239c67d14788
+>>>>>>> develop:WorldOfMusic/Assets/Resources/Citizens PRO/Materials/Stairs_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

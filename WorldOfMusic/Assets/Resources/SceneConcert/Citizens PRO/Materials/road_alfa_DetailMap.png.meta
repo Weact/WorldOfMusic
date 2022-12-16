@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:WorldOfMusic/Assets/Resources/SceneConcert/Citizens PRO/Materials/road_alfa_DetailMap.png.meta
 guid: 000d84a371f2bbe49a8ca93aeb177b52
+=======
+guid: 97913b05e1c90f348a585f392dd4154f
+>>>>>>> develop:WorldOfMusic/Assets/Resources/Citizens PRO/Materials/road_alfa_DetailMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

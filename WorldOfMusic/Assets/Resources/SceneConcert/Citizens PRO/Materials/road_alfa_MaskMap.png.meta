@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:WorldOfMusic/Assets/Resources/SceneConcert/Citizens PRO/Materials/road_alfa_MaskMap.png.meta
 guid: f0674312d1bba74438b41c9ab12eeae3
+=======
+guid: fd596260e21ed9a48869b3c6089f1298
+>>>>>>> develop:WorldOfMusic/Assets/Resources/Citizens PRO/Materials/road_alfa_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

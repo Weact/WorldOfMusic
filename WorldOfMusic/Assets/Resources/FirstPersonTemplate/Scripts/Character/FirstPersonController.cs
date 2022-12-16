@@ -2,6 +2,7 @@
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
 #endif
+using Unity.Netcode;
 
 namespace StarterAssets
 {
@@ -9,8 +10,12 @@ namespace StarterAssets
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 	[RequireComponent(typeof(PlayerInput))]
 #endif
-	public class FirstPersonController : MonoBehaviour
+
+	public class FirstPersonController : NetworkBehaviour
 	{
+
+    	[SerializeField]
+    	private NetworkObject _networkObject;
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
@@ -20,6 +25,7 @@ namespace StarterAssets
 		public float RotationSpeed = 1.0f;
 		[Tooltip("Acceleration and deceleration")]
 		public float SpeedChangeRate = 10.0f;
+		
 
 		[Space(10)]
 		[Tooltip("The height the player can jump")]
@@ -97,6 +103,8 @@ namespace StarterAssets
 
 		private void Start()
 		{
+			if (!_networkObject.IsOwner)
+    			return;
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
@@ -112,14 +120,23 @@ namespace StarterAssets
 
 		private void Update()
 		{
+			
+			if (!_networkObject.IsOwner)
+    			return;
+			else{ 
 			JumpAndGravity();
 			GroundedCheck();
-			Move();
+			//Move();
+			}
 		}
 
 		private void LateUpdate()
 		{
+			if (!_networkObject.IsOwner)
+    			return;
+			else{
 			CameraRotation();
+			}
 		}
 
 		private void GroundedCheck()
@@ -150,7 +167,7 @@ namespace StarterAssets
 				transform.Rotate(Vector3.up * _rotationVelocity);
 			}
 		}
-
+		/*
 		private void Move()
 		{
 			// set target speed based on move speed, sprint speed and if sprint is pressed
@@ -197,7 +214,7 @@ namespace StarterAssets
 			// move the player
 			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 		}
-
+*/
 		private void JumpAndGravity()
 		{
 			if (Grounded)
@@ -264,5 +281,7 @@ namespace StarterAssets
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
 		}
+		
 	}
+	
 }
