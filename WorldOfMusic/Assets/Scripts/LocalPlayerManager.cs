@@ -7,6 +7,8 @@ public class LocalPlayerManager : MonoBehaviour
 {
     [SerializeField]
     private VivoxVoiceManager voiceManager;
+    [SerializeField]
+    private ServerManager serverManager;
 
     private bool bChannel = true;
     
@@ -18,6 +20,9 @@ public class LocalPlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (serverManager.bServeur)
+            return;
+        
         if (voiceManager.LoginState==LoginState.LoggedOut)
             ConnectVoice();
         
