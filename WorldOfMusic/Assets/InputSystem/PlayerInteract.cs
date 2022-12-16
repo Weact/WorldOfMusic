@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class PlayerInteract : MonoBehaviour {
     public bool isReaching = false;
     public bool isInteracted = false;
@@ -68,3 +68,4 @@ public class PlayerInteract : MonoBehaviour {
    }
    
 }
+*/
