@@ -21,7 +21,6 @@ public class Script_Flamme : MonoBehaviour
         {
             Debug.Log("test + haut " + Sound_Peer.bandBuffer[band]);
             system.Play();
-            //system.startSpeed = 10f;
             transform.localScale = new Vector3(5f, 3.2f, Sound_Peer.bandBuffer[band]);
         }
         
