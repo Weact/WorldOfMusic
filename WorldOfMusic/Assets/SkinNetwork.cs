@@ -16,10 +16,10 @@ public class SkinNetwork : NetworkBehaviour
     }
      public override void OnNetworkSpawn()
     {
-    if (IsOwner)
-    {
-        skin = skinss[FindObjectOfType<NetworkManagerUI>().color];
-        Instantiate(skin, transform.position,transform.rotation, transform.GetChild(0) );
-    }
+        if (IsOwner)
+        {
+            //skin = skinss[FindObjectOfType<NetworkManagerUI>().color];
+            Instantiate(skin, transform.position,transform.rotation, transform.GetChild(0) );
+        }
     }
 }
