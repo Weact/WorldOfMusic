@@ -2,57 +2,23 @@
   {
     "name": "SM_Bld_Pillar_Exterior_01(Clone)",
     "position": {
-      "x": 0.5,
-      "y": -0.200000048,
-      "z": 14.0,
-      "normalized": {
-        "x": 0.0356878936,
-        "y": -0.0142751615,
-        "z": 0.999261,
-        "magnitude": 1.0,
-        "sqrMagnitude": 1.0
-      },
-      "magnitude": 14.0103531,
-      "sqrMagnitude": 196.29
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "magnitude": 0.0,
+      "sqrMagnitude": 0.0
     },
     "rotation": {
       "x": 0.0,
-      "y": 0.7071066,
+      "y": 0.0,
       "z": 0.0,
-      "w": -0.707106948,
+      "w": 1.0,
       "eulerAngles": {
         "x": 0.0,
-        "y": 270.000031,
+        "y": 0.0,
         "z": 0.0,
-        "normalized": {
-          "x": 0.0,
-          "y": 1.0,
-          "z": 0.0,
-          "magnitude": 1.0,
-          "sqrMagnitude": 1.0
-        },
-        "magnitude": 270.000031,
-        "sqrMagnitude": 72900.0156
-      },
-      "normalized": {
-        "x": 0.0,
-        "y": 0.70710665,
-        "z": 0.0,
-        "w": -0.707107,
-        "eulerAngles": {
-          "x": 0.0,
-          "y": 270.000031,
-          "z": 0.0,
-          "normalized": {
-            "x": 0.0,
-            "y": 1.0,
-            "z": 0.0,
-            "magnitude": 1.0,
-            "sqrMagnitude": 1.0
-          },
-          "magnitude": 270.000031,
-          "sqrMagnitude": 72900.0156
-        }
+        "magnitude": 0.0,
+        "sqrMagnitude": 0.0
       }
     }
   }
