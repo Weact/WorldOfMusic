@@ -76,6 +76,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1161782377523344130, guid: b670a9393099ef74182104159780a5b6,
         type: 3}
+      propertyPath: LogicScript
+      value: 
+      objectReference: {fileID: 5960594904995923328}
+    - target: {fileID: 1161782377523344130, guid: b670a9393099ef74182104159780a5b6,
+        type: 3}
       propertyPath: StandExporter
       value: 
       objectReference: {fileID: 9155040437315961367}

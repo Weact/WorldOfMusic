@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StandSingleton : MonoBehaviour
 {
@@ -37,5 +38,9 @@ public class StandSingleton : MonoBehaviour
     {
         standJson = json;
         updated = true;
+    }
+    public void OpenEditorScene()
+    {
+        SceneManager.LoadScene("Scenes/Stand/StandScene");
     }
 }

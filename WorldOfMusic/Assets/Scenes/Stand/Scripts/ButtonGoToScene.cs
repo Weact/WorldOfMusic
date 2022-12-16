@@ -16,6 +16,6 @@ public class ButtonGoToScene : MonoBehaviour
 
     public void goToEditor()
     {
-        SceneManager.LoadScene("Scenes/Stand/StandScene");
+        StandSingleton.Instance.OpenEditorScene();
     }
 }
