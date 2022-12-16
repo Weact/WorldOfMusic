@@ -1,0 +1,76 @@
+[
+  {
+    "name": "SM_Bld_Pillar_Exterior_01(Clone)",
+    "position": {
+      "x": 15.0,
+      "y": -0.200000048,
+      "z": 9.5,
+      "normalized": {
+        "x": 0.8447655,
+        "y": -0.0112635428,
+        "z": 0.535018146,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.0
+      },
+      "magnitude": 17.7564068,
+      "sqrMagnitude": 315.29
+    },
+    "rotation": {
+      "x": 0.0,
+      "y": 0.923879564,
+      "z": 0.0,
+      "w": -0.382683426,
+      "eulerAngles": {
+        "x": 0.0,
+        "y": 225.0,
+        "z": 0.0,
+        "normalized": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 225.0,
+        "sqrMagnitude": 50625.0
+      }
+    }
+  },
+  {
+    "name": "SM_Bld_Stairs_Carpet_01(Clone)",
+    "position": {
+      "x": 0.0,
+      "y": -0.200000048,
+      "z": 4.0,
+      "normalized": {
+        "x": 0.0,
+        "y": -0.0499376319,
+        "z": 0.998752356,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.0
+      },
+      "magnitude": 4.004997,
+      "sqrMagnitude": 16.04
+    },
+    "rotation": {
+      "x": 0.0,
+      "y": 0.7071068,
+      "z": 0.0,
+      "w": -0.7071068,
+      "eulerAngles": {
+        "x": 0.0,
+        "y": 270.0,
+        "z": 0.0,
+        "normalized": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 270.0,
+        "sqrMagnitude": 72900.0
+      }
+    }
+  }
+]
