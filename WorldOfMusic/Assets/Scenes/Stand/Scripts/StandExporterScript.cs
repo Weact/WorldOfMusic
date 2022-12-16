@@ -1,6 +1,7 @@
 using System.IO;
 using UnityEngine;
 using Newtonsoft.Json;
+using UnityEngine.SceneManagement;
 
 public class StandExporterScript : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class StandExporterScript : MonoBehaviour
     }
 
     // Save the objects from the children of the specified game object to a file
-    void SaveObjects(GameObject parent, string fileName)
+    string SaveObjects(GameObject parent, string fileName)
     {
         // Create an array to store the saved objects
         SavedObject[] objects = new SavedObject[parent.transform.childCount];
@@ -47,7 +48,9 @@ public class StandExporterScript : MonoBehaviour
 
         // Write the JSON string to the file
         File.WriteAllText(fileName, json);
+        return json;
     }
+    
     // Load objects from the specified file and add them as children of the specified game object
     SavedObject[] LoadObjects(string fileName)
     {
@@ -63,10 +66,17 @@ public class StandExporterScript : MonoBehaviour
     public void SaveStand()
     {
         GameObject userObjects = GameObject.Find(userObjectsName);
-        SaveObjects(userObjects, saveFileName);
+        string json = SaveObjects(userObjects, saveFileName);
         Debug.Log("Saved stand in " + saveFileName);
-        //SEND TO SERVER TODO
+        StandSingleton.Instance.SetStandJson(json);
         
+        //SEND TO SERVER TODO
+        leaveEditor();
+    }
+    
+    public void leaveEditor()
+    {
+        SceneManager.LoadScene("Scenes/Stand/EmptyTestScene");
     }
 
     public void LoadStandEditor()
@@ -82,11 +92,7 @@ public class StandExporterScript : MonoBehaviour
         }
         SavedObject[] objects = LoadObjects(saveFileName);
         Debug.Log("Loaded stand in " + saveFileName);
-        GameObject userObjects = GameObject.Find(userObjectsName);
-        for (int i = 0; i < userObjects.transform.childCount; i++)
-        {
-            Destroy(userObjects.transform.GetChild(i).gameObject);
-        }
+        cleanStand();
         
         // Loop through the saved objects
         foreach (SavedObject obj in objects)
@@ -96,5 +102,15 @@ public class StandExporterScript : MonoBehaviour
             StandLogic.CreateElement(prefab, obj.position, obj.rotation, false);
 
         }
+    }
+    
+    public void cleanStand()
+    {
+        GameObject userObjects = GameObject.Find(userObjectsName);
+        for (int i = 0; i < userObjects.transform.childCount; i++)
+        {
+            Destroy(userObjects.transform.GetChild(i).gameObject);
+        }
+        
     }
 }
