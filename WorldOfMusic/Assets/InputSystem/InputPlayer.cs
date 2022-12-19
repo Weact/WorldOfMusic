@@ -28,6 +28,24 @@ public partial class @InputPlayer : IInputActionCollection2, IDisposable
             ""id"": ""a012d03a-6d74-42ac-ab24-7a649dbf649a"",
             ""actions"": [
                 {
+                    ""name"": ""HautBas"",
+                    ""type"": ""Button"",
+                    ""id"": ""75b2ded2-e24a-45c5-b7c3-4d612e46d9ea"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""GaucheDroite"",
+                    ""type"": ""Button"",
+                    ""id"": ""a05ca569-757e-41e7-8b89-7f0f74aed27b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""216b8070-8e65-42e7-97c3-6d9b1848d2c5"",
@@ -35,45 +53,75 @@ public partial class @InputPlayer : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Haut"",
-                    ""type"": ""Value"",
-                    ""id"": ""c7eaea8c-0f70-4ced-8ac8-312b15990bb7"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Bas"",
-                    ""type"": ""Value"",
-                    ""id"": ""d6ef3b74-dd8c-4579-aa99-c5dfded7905d"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Gauche"",
-                    ""type"": ""Value"",
-                    ""id"": ""dc8cda6e-bcde-41e2-af97-f041d1e1ccfa"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Droite"",
-                    ""type"": ""Value"",
-                    ""id"": ""3f434aca-2819-4873-ac68-aca67cdb1a4a"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""d91f2ef2-09fc-45d8-b435-840e7ae0b303"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HautBas"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Negative"",
+                    ""id"": ""7e4c70b1-90c6-4d56-95d3-afb33fce0112"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HautBas"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Positive"",
+                    ""id"": ""dab2e632-4ac3-4fa7-9797-c6998d110355"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""HautBas"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""145be75a-2787-4757-8f5e-e4e75f9f2927"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GaucheDroite"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""aa067c3b-5279-48f6-9858-ced00d1c2296"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GaucheDroite"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""f73a8ff5-faaf-4f81-ab46-89357f15b9ae"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GaucheDroite"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
                 {
                     ""name"": """",
                     ""id"": ""d365d93e-7342-4723-b6dd-7a2cf31f5218"",
@@ -84,50 +132,6 @@ public partial class @InputPlayer : IInputActionCollection2, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""04a66930-c6e3-46c1-9f84-62abb39b571b"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Haut"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""31857b77-694c-4c5f-bc24-43b35848faf7"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Bas"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""4a94cee4-2b2a-44e3-b488-e1aad3cbab03"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Gauche"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a92dc1cc-1f79-4d54-9490-0c9aef6beffc"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Droite"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -136,11 +140,9 @@ public partial class @InputPlayer : IInputActionCollection2, IDisposable
 }");
         // PlayerMap
         m_PlayerMap = asset.FindActionMap("PlayerMap", throwIfNotFound: true);
+        m_PlayerMap_HautBas = m_PlayerMap.FindAction("HautBas", throwIfNotFound: true);
+        m_PlayerMap_GaucheDroite = m_PlayerMap.FindAction("GaucheDroite", throwIfNotFound: true);
         m_PlayerMap_Jump = m_PlayerMap.FindAction("Jump", throwIfNotFound: true);
-        m_PlayerMap_Haut = m_PlayerMap.FindAction("Haut", throwIfNotFound: true);
-        m_PlayerMap_Bas = m_PlayerMap.FindAction("Bas", throwIfNotFound: true);
-        m_PlayerMap_Gauche = m_PlayerMap.FindAction("Gauche", throwIfNotFound: true);
-        m_PlayerMap_Droite = m_PlayerMap.FindAction("Droite", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -200,20 +202,16 @@ public partial class @InputPlayer : IInputActionCollection2, IDisposable
     // PlayerMap
     private readonly InputActionMap m_PlayerMap;
     private IPlayerMapActions m_PlayerMapActionsCallbackInterface;
+    private readonly InputAction m_PlayerMap_HautBas;
+    private readonly InputAction m_PlayerMap_GaucheDroite;
     private readonly InputAction m_PlayerMap_Jump;
-    private readonly InputAction m_PlayerMap_Haut;
-    private readonly InputAction m_PlayerMap_Bas;
-    private readonly InputAction m_PlayerMap_Gauche;
-    private readonly InputAction m_PlayerMap_Droite;
     public struct PlayerMapActions
     {
         private @InputPlayer m_Wrapper;
         public PlayerMapActions(@InputPlayer wrapper) { m_Wrapper = wrapper; }
+        public InputAction @HautBas => m_Wrapper.m_PlayerMap_HautBas;
+        public InputAction @GaucheDroite => m_Wrapper.m_PlayerMap_GaucheDroite;
         public InputAction @Jump => m_Wrapper.m_PlayerMap_Jump;
-        public InputAction @Haut => m_Wrapper.m_PlayerMap_Haut;
-        public InputAction @Bas => m_Wrapper.m_PlayerMap_Bas;
-        public InputAction @Gauche => m_Wrapper.m_PlayerMap_Gauche;
-        public InputAction @Droite => m_Wrapper.m_PlayerMap_Droite;
         public InputActionMap Get() { return m_Wrapper.m_PlayerMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -223,50 +221,36 @@ public partial class @InputPlayer : IInputActionCollection2, IDisposable
         {
             if (m_Wrapper.m_PlayerMapActionsCallbackInterface != null)
             {
+                @HautBas.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnHautBas;
+                @HautBas.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnHautBas;
+                @HautBas.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnHautBas;
+                @GaucheDroite.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnGaucheDroite;
+                @GaucheDroite.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnGaucheDroite;
+                @GaucheDroite.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnGaucheDroite;
                 @Jump.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnJump;
-                @Haut.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnHaut;
-                @Haut.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnHaut;
-                @Haut.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnHaut;
-                @Bas.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnBas;
-                @Bas.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnBas;
-                @Bas.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnBas;
-                @Gauche.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnGauche;
-                @Gauche.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnGauche;
-                @Gauche.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnGauche;
-                @Droite.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnDroite;
-                @Droite.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnDroite;
-                @Droite.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnDroite;
             }
             m_Wrapper.m_PlayerMapActionsCallbackInterface = instance;
             if (instance != null)
             {
+                @HautBas.started += instance.OnHautBas;
+                @HautBas.performed += instance.OnHautBas;
+                @HautBas.canceled += instance.OnHautBas;
+                @GaucheDroite.started += instance.OnGaucheDroite;
+                @GaucheDroite.performed += instance.OnGaucheDroite;
+                @GaucheDroite.canceled += instance.OnGaucheDroite;
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
-                @Haut.started += instance.OnHaut;
-                @Haut.performed += instance.OnHaut;
-                @Haut.canceled += instance.OnHaut;
-                @Bas.started += instance.OnBas;
-                @Bas.performed += instance.OnBas;
-                @Bas.canceled += instance.OnBas;
-                @Gauche.started += instance.OnGauche;
-                @Gauche.performed += instance.OnGauche;
-                @Gauche.canceled += instance.OnGauche;
-                @Droite.started += instance.OnDroite;
-                @Droite.performed += instance.OnDroite;
-                @Droite.canceled += instance.OnDroite;
             }
         }
     }
     public PlayerMapActions @PlayerMap => new PlayerMapActions(this);
     public interface IPlayerMapActions
     {
+        void OnHautBas(InputAction.CallbackContext context);
+        void OnGaucheDroite(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
-        void OnHaut(InputAction.CallbackContext context);
-        void OnBas(InputAction.CallbackContext context);
-        void OnGauche(InputAction.CallbackContext context);
-        void OnDroite(InputAction.CallbackContext context);
     }
 }

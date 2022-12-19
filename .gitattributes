@@ -1,1 +1,2 @@
-WorldOfMusic/Assets/Resources/SceneConcert/camera-16-mm-arri-arriflex-16st-super-16/source/Merged_Arriflex16S1_v2.fbx filter=lfs diff=lfs merge=lfs -text
+*.fbx filter=lfs diff=lfs merge=lfs -text
+.fbx filter=lfs diff=lfs merge=lfs -text
